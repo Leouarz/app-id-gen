@@ -264,7 +264,7 @@ export default function Home() {
         <title>Avail App id generator</title>
         <meta
           name="description"
-          content="A simple app to create an app id with polkadot js"
+          content="A simple app to create an app id in avail goldberg network"
         />
       </Head>
       <div
