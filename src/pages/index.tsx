@@ -121,7 +121,7 @@ export default function Home() {
       // Send the transaction
       const tx = api.tx.dataAvailability.createApplicationKey(appName);
       addLogs(
-        `Sending tx with account ${accountObject.address} and wallet ${extension}. Create app id with name ${appName}`,
+        `Sending tx with account ${accountObject.address}. Create app id with name ${appName}`,
         "info"
       );
       const unsub = await tx.signAndSend(
