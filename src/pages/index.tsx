@@ -1,5 +1,5 @@
 import { MouseEventHandler, useState } from "react";
-import { ApiPromise, initialize, signedExtensions, types } from "avail-js-sdk";
+import { ApiPromise, goldbergRpc, goldbergTypes, GOLDBERG_ENDPOINT, initialize, signedExtensions, types } from "avail-js-sdk";
 import { isNumber } from "@polkadot/util";
 import { SignerOptions } from "@polkadot/api/types";
 import Head from "next/head";
@@ -183,7 +183,7 @@ export default function Home() {
       // Init API
       let api = availApi;
       if (!(api && api.isConnected)) {
-        api = await initialize();
+        api = await initialize(GOLDBERG_ENDPOINT, { types: goldbergTypes, rpc: goldbergRpc });
         setAvailApi(api);
       }
 
