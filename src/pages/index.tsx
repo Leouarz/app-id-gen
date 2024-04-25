@@ -1,5 +1,5 @@
 import { MouseEventHandler, useState } from "react";
-import { ApiPromise, goldbergRpc, goldbergTypes, GOLDBERG_ENDPOINT, initialize, signedExtensions, types } from "avail-js-sdk";
+import { ApiPromise, rpc, types, TURING_ENDPOINT, initialize, signedExtensions } from "avail-js-sdk";
 import { isNumber } from "@polkadot/util";
 import { SignerOptions } from "@polkadot/api/types";
 import Head from "next/head";
@@ -145,7 +145,7 @@ export default function Home() {
             );
             if (failed) {
               addLogs(
-                `Transaction failed, please check your funds and chose a unique name, more details here: https://goldberg.avail.tools/#/explorer/query/${status.asInBlock}`,
+                `Transaction failed, please check your funds and chose a unique name, more details here: https://explorer.avail.tools/#/explorer/query/${status.asInBlock}`,
                 "error"
               );
             }
@@ -183,7 +183,7 @@ export default function Home() {
       // Init API
       let api = availApi;
       if (!(api && api.isConnected)) {
-        api = await initialize(GOLDBERG_ENDPOINT, { types: goldbergTypes, rpc: goldbergRpc });
+        api = await initialize(TURING_ENDPOINT, { types: types, rpc: rpc });
         setAvailApi(api);
       }
 
@@ -264,7 +264,7 @@ export default function Home() {
         <title>Avail App id generator</title>
         <meta
           name="description"
-          content="A simple app to create an app id in avail goldberg network"
+          content="A simple app to create an app id in avail turing network"
         />
       </Head>
       <div
