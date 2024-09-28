@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useWallet } from '../context/WalletContext';
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Button } from './ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 import { shortenAddress } from '@/lib/utils';
