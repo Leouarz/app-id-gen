@@ -21,7 +21,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Avail App Management",
-  description: "An application to manage you Avail application ids",
+  description: "An application to manage your Avail application ids",
 };
 
 export default function RootLayout({
