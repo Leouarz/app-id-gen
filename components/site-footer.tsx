@@ -13,7 +13,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <Image
             src={
-              "https://www.availproject.org/_next/static/media/avail_logo.9c818c5a.png"
+              "/logo.svg"
             }
             alt="Logo"
             width={"120"}
